@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
@@ -25,15 +26,16 @@ body {
     border-radius: 5px;
 }
 
-#login-screen input, #chat-input input {
+/* Input Fields and Buttons */
+#login-screen input, #chat-input input, #connect-section input {
     padding: 10px;
-    width: 200px;
+    width: 250px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-#login-screen button, #chat-input button {
+#login-screen button, #chat-input button, #connect-section button {
     padding: 10px 20px;
     background-color: #5c6bc0;
     color: #fff;
@@ -42,10 +44,11 @@ body {
     cursor: pointer;
 }
 
-#login-screen button:hover, #chat-input button:hover {
+#login-screen button:hover, #chat-input button:hover, #connect-section button:hover {
     background-color: #3949ab;
 }
 
+/* Chat Header */
 #chat-header {
     width: 100%;
     display: flex;
@@ -54,9 +57,15 @@ body {
     margin-bottom: 10px;
 }
 
+#user-info {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Chat Messages */
 #chat-messages {
-    width: 400px;
-    height: 300px;
+    width: 500px;
+    height: 400px;
     border: 1px solid #ddd;
     padding: 10px;
     overflow-y: scroll;
@@ -76,8 +85,11 @@ body {
 .message .text {
     word-wrap: break-word;
 }
+
+/* Connect Section */
 #connect-section {
     display: flex;
+    width: 500px;
     margin-bottom: 10px;
 }
 
@@ -96,4 +108,41 @@ body {
 
 #connect-section button:hover {
     background-color: #0288d1;
+}
+
+/* Chat Input */
+#chat-input {
+    display: flex;
+    width: 500px;
+}
+
+#chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+#chat-input button {
+    padding: 10px 20px;
+    background-color: #66bb6a;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+#chat-input button:hover {
+    background-color: #43a047;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #chat-messages, #connect-section, #chat-input {
+        width: 90%;
+    }
+
+    #login-screen input {
+        width: 90%;
+    }
 }

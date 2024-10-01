@@ -8,28 +8,40 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Login Screen -->
     <div id="login-screen" class="screen">
         <h2>Join Chat</h2>
         <input type="text" id="username" placeholder="Enter your username" required />
         <button id="join-btn">Join</button>
     </div>
 
+    <!-- Chat Screen -->
     <div id="chat-screen" class="screen hidden">
+        <!-- Chat Header -->
         <div id="chat-header">
             <h2>Chat Room</h2>
             <span id="user-info"></span>
         </div>
+
+        <!-- Chat Messages -->
         <div id="chat-messages"></div>
+
+        <!-- Connect Section -->
+        <div id="connect-section">
+            <input type="text" id="peer-id" placeholder="Enter peer ID to connect" />
+            <button id="connect-btn">Connect</button>
+        </div>
+
+        <!-- Chat Input -->
         <div id="chat-input">
             <input type="text" id="message" placeholder="Type a message..." />
             <button id="send-btn">Send</button>
         </div>
     </div>
-<div id="connect-section">
-    <input type="text" id="peer-id" placeholder="Enter peer ID to connect" />
-    <button id="connect-btn">Connect</button>
-</div>
+
+    <!-- PeerJS Library -->
     <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <!-- Custom Script -->
     <script src="script.js"></script>
 </body>
 </html>
